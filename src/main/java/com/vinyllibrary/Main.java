@@ -20,7 +20,8 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 1100, 600));
         primaryStage.show();
 
-        VinylLibrary library = new VinylLibrary();
+        MainController controller = loader.getController();
+        VinylLibrary library = controller.getViewModel().getLibrary();
 
         Thread simulationThread = new Thread(new UserSimulation(library), "UserSimulationThread");
         simulationThread.setDaemon(true);

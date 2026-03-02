@@ -6,7 +6,7 @@ import com.vinyllibrary.patterns.observer.Observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VinylLibrary implements Observable {
+public class VinylLibrary implements Observable, Observer {
     private final List<Vinyl> vinyls;
     private final List<Observer> observers;
 
@@ -68,5 +68,10 @@ public class VinylLibrary implements Observable {
         for (Observer observer : observers) {
             observer.update();
         }
+    }
+
+    @Override
+    public void update() {
+        notifyObservers();
     }
 }

@@ -1,6 +1,7 @@
 package com.vinyllibrary.view;
 
 import com.vinyllibrary.model.Vinyl;
+import com.vinyllibrary.viewmodel.MainViewModel;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -185,5 +186,9 @@ public class MainController implements Initializable {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    public MainViewModel getViewModel() {
+        return viewModel;
     }
 }
