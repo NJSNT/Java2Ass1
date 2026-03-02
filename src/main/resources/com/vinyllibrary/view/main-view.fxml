@@ -5,7 +5,10 @@
 <?import javafx.scene.layout.*?>
 
 <VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.vinyllibrary.view.MainController" spacing="10" padding="20">
+      fx:controller="com.vinyllibrary.view.MainController" spacing="10">
+    <padding>
+        <Insets topRightBottomLeft="20" />
+    </padding>
     
     <HBox spacing="10" alignment="CENTER_LEFT">
         <Label text="User ID:" />
