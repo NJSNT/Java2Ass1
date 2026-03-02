@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.vinyllibrary.view.MainController" spacing="10" padding="20">
+    
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="User ID:" />
+        <TextField fx:id="userIdField" prefWidth="150" promptText="Enter user ID" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button fx:id="addVinylButton" text="Add Vinyl" onAction="#handleAddVinyl" />
+    </HBox>
+    
+    <TableView fx:id="vinylTableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="80" />
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200" />
+            <TableColumn fx:id="artistColumn" text="Artist" prefWidth="150" />
+            <TableColumn fx:id="releaseYearColumn" text="Year" prefWidth="80" />
+            <TableColumn fx:id="stateColumn" text="State" prefWidth="150" />
+            <TableColumn fx:id="borrowedByColumn" text="Borrowed By" prefWidth="100" />
+            <TableColumn fx:id="reservedByColumn" text="Reserved By" prefWidth="100" />
+            <TableColumn fx:id="markedForRemovalColumn" text="Marked for Removal" prefWidth="150" />
+        </columns>
+    </TableView>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="reserveButton" text="Reserve" onAction="#handleReserve" />
+        <Button fx:id="borrowButton" text="Borrow" onAction="#handleBorrow" />
+        <Button fx:id="returnButton" text="Return" onAction="#handleReturn" />
+        <Button fx:id="markForRemovalButton" text="Mark for Removal" onAction="#handleMarkForRemoval" style="-fx-background-color: #ffcccc;" />
+    </HBox>
+    
+</VBox>
